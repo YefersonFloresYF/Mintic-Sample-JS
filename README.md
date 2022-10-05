@@ -1,0 +1,1 @@
+# Mintic-Sample-JS
