@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Tester</title>
+    <script>
+        function Salida(){
+            if (confirm('Estas seguro de que quieres abandonar esta página?')){
+                window.close();
+            } 
+        }
+    </script>
+</head>
+<!-- Body modified for adding OnLoad event -->
+<body onLoad="document.getElementById('boton').value='Full load: Pulsar boton'">
+<!-- Alternative for page onResize event -->
+<!-- <body onResize="alert('Resize tested')"> -->
+
+    <center>
+        <input type="button" name="boton" id="boton"
+        onClick = "window.alert('Click completado');"> 
+    </center>
+
+    <center>
+        <input type="text" value="Muestra mensaje al enfocar" size="30"
+        onFocus="window.alert('Focus completado');">
+    </center>
+
+    <center>
+        <input type="text" value="Muestra mensaje al perder el foco" size="40"
+        name="texto" onBlur="window.alert('Blur completado');">
+    </center>
+ 
+    <center>
+        <input type="text" value="Muestra mensaje al modificar texto" size="40"
+        name="texto" onChange="window.alert('Change completado');">
+    </center>
+
+    <center>
+        <input type="text" size=30 name="texto" value="Mensaje al pulsar tecla" 
+        onKeyPress = "alert('Pulsar tecla completado');"> 
+    </center>
+
+    <center>
+        <input type="text" size=30 name="texto" value="Muestra mensaje al mover"
+        onMove = "alert('Mover completado');">
+    </center>
+
+    <center>
+        <input type="text" size=30 
+       name="texto" value="Al seleccionar texto muestra mensaje" 
+       onSelect = " alert('Seleccionar completado');">
+    </center>
+    
+    <center>
+        <input type="text" size=30 id="TestBlank" 
+        value="Al borrar muestra mensaje" onReset = "alert('Reset completado!');">
+
+        <input type="reset" size=30 
+        name="boton1" value="Borrar…" onClick = "document.getElementById('TestBlank').value = '';" >
+    </center>
+
+    <center>
+        <input type="text" size=30 
+        name="texto" value="Pulsar boton raton aqui para mensaje" 
+        onMouseDown = "alert('Hola mundo!');">
+    </center>
+
+    <center>
+        <input type="button" name="salida" value="Salir"
+        onClick = Salida()> 
+    </center>   
+</body>
+</html>
