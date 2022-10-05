@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>h1{background-color: red}</style>
+    <script>
+        var edad=prompt("Indica tu edad");
+
+        while(!confirm("Tu edad: "+edad)){
+            edad=prompt("Indica tu edad");
+        }
+
+        if(edad < 18 )
+        {
+            alert("Eres menor de edad");
+        }
+        else
+        {
+            alert("Eres mayor de edad");
+        }
+        
+        setTimeout("reemplazar()", 5000);
+        document.write("Esta página se reemplazará en 5 seg");
+        function reemplazar(){
+            location.assign("replace.html");
+        }
+
+        /* Alternative function for closing page*/
+        // setTimeout("cerrar()", 5000);
+        // document.write("Esta página se cerrará en 5 seg");
+        // function cerrar(){
+        //     window.close();
+        // }
+    </script>
+</head>
+<body>
+    <br><a href="javascript:window.print()">Imprimir esta página></a>
+</body>
+</html>
+
